@@ -6,7 +6,9 @@ from aiogram.enums import ParseMode
 from aiogram.filters import Command
 from aiogram.types import Message
 from config import token
-from buttons import keyboard
+from buttons import keyboard, sezonkey
+
+logging.basicConfig(level=logging.INFO)
 
 TOKEN = token
 
@@ -24,7 +26,11 @@ async def shop(message: Message):
 
     @dp.message(F.text == "Keyimlar")
     async def keyimlar(message: Message):
-        await message.answer_photo(photo="https://images.app.goo.gl/upbBmapdjXNvU1im8", caption="my shoping")
+        await message.answer_photo(photo="https://images.app.goo.gl/upbBmapdjXNvU1im8", reply_markup=sezonkey)
+
+    @dp.message(F.text == "Texnika")
+    async def texnika(message: Message):
+        await message.answer_photo(photo="https://images.app.goo.gl/G72qTPNQBqg8gE257", caption="my shoping")
 
 
 async def main() -> None:
@@ -33,5 +39,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
