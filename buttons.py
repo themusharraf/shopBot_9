@@ -10,3 +10,10 @@ sezon = [
     [types.KeyboardButton(text="Kuz 🍁"), types.KeyboardButton(text="Yoz 😎")],
 ]
 sezonkey = types.ReplyKeyboardMarkup(keyboard=sezon, resize_keyboard=True)
+
+keyWen = [
+    [types.KeyboardButton(text="Palto 🧥"), types.KeyboardButton(text="Etik 🥾")],
+    [types.KeyboardButton(text="Qulqop 🧤"), types.KeyboardButton(text="Sharf 🧣")],
+]
+
+wenKey = types.ReplyKeyboardMarkup(keyboard=keyWen, resize_keyboard=True)
