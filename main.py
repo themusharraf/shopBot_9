@@ -42,6 +42,10 @@ Göğüs: 98 cm Bel: 85 cm Basen: 99 cm
 """,
                                            reply_markup=shopKey.as_markup())
 
+            @dp.message(F.text == "orqaga")
+            async def keyimlar(message: Message):
+                await message.answer("....",reply_markup=keyboard)
+
     @dp.message(F.text == "Texnika")
     async def texnika(message: Message):
         await message.answer_photo(photo="https://images.app.goo.gl/G72qTPNQBqg8gE257", caption="my shoping",
